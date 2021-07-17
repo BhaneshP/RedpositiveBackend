@@ -10,10 +10,10 @@ const userSchema = new mongoose.Schema({
     
     },
     phn:{
-        type:Number,
+        type:String,
         required:true,
         validate(value){
-            if(value<10||value>13){
+            if(value.length<10||value.length>12){
                 throw new Error('Invalid phone number')
             }
         }
